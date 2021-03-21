@@ -72,6 +72,10 @@ local Imput = game:GetService("UserInputService")
 _G.on = 1
     while _G.on == 1
  do
+local humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+    if not humanoid then return end
+        humanoid.Died:Connect(function()
+            game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
 print("\nauto respawn script made by t h e p l a y e r�#9980")
 wait(9)
 local SavePosition = Instance.new("TextLabel")
@@ -107,7 +111,11 @@ _G.on = 0
     while _G.on == 1
  do
  
- 
+ local humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+    if not humanoid then return end
+        humanoid.Died:Connect(function()
+            game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+        end)
 print("\nauto respawn script made by t h e p l a y e r�#9980")
 wait(9)
 local SavePosition = Instance.new("TextLabel")
