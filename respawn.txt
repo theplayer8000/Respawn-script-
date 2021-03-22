@@ -107,8 +107,6 @@ _G.on = 0
     while _G.on == 1
  do
  
-            game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
-        end)
 print("\nauto respawn script made by t h e p l a y e r�#9980")
 wait(9)
 local SavePosition = Instance.new("TextLabel")
