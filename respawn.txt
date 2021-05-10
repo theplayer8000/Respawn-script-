@@ -13,7 +13,7 @@ local SavePosition = Instance.new("TextLabel")
 		--print(tostring(SavePosition.Text))
 	--print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
 	--print(tostring(SavePosition.Text))
-		wait(1.59
+		wait(1.59)
 	--print("screengui disabled")
 	repeat wait() until game.Players.LocalPlayer.Character.Humanoid
 	--print("Teleporting back to " ..tostring(SavePosition.Text))
