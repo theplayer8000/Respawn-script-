@@ -20,9 +20,9 @@ local SavePosition = Instance.new("TextLabel")
 		--print(tostring(SavePosition.Text))
 	--print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
 	--print(tostring(SavePosition.Text))
-		wait(1.59)
+		wait(3)
 	--print("screengui disabled")
-	repeat wait() until game.Players.LocalPlayer.Character.Humanoid
+	repeat wait(3) until game.Players.LocalPlayer.Character.Humanoid
 	--print("Teleporting back to " ..tostring(SavePosition.Text))
 	local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
@@ -84,7 +84,7 @@ wait(9)
 local SavePosition = Instance.new("TextLabel")
 player = game.Players.LocalPlayer.Character.Humanoid
 player.HealthChanged:Connect(function(hp)
-  if hp <= player.MaxHealth * 0.5 then
+  if hp <= player.MaxHealth * 0.599 then
 wait()
     game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
             lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
@@ -94,9 +94,9 @@ wait()
         --print(tostring(SavePosition.Text))
     --print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
     --print(tostring(SavePosition.Text))
-        wait(1.599)
+        wait(3)
     --print("screengui disabled")
-    repeat wait() until game.Players.LocalPlayer.Character.Humanoid
+    repeat wait(3) until game.Players.LocalPlayer.Character.Humanoid
     --print("Teleporting back to " ..tostring(SavePosition.Text))
     local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
@@ -119,7 +119,7 @@ wait(9)
 local SavePosition = Instance.new("TextLabel")
 player = game.Players.LocalPlayer.Character.Humanoid
 player.HealthChanged:Connect(function(hp)
-  if hp <= player.MaxHealth * 0.5 then
+  if hp <= player.MaxHealth * 0.599 then
 wait()
     game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
             lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
@@ -129,9 +129,9 @@ wait()
         --print(tostring(SavePosition.Text))
     --print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
     --print(tostring(SavePosition.Text))
-        wait(1.599)
+        wait(3)
     --print("screengui disabled")
-    repeat wait() until game.Players.LocalPlayer.Character.Humanoid
+    repeat wait(3) until game.Players.LocalPlayer.Character.Humanoid
     --print("Teleporting back to " ..tostring(SavePosition.Text))
     local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
