@@ -22,7 +22,7 @@ local SavePosition = Instance.new("TextLabel")
 	--print(tostring(SavePosition.Text))
 		wait(0.599)
 	--print("screengui disabled")
-	repeat wait(0.499) until game.Players.LocalPlayer.Character.Humanoid
+	repeat wait(0.999) until game.Players.LocalPlayer.Character.Humanoid
 	--print("Teleporting back to " ..tostring(SavePosition.Text))
 	local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
