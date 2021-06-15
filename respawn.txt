@@ -88,7 +88,7 @@ wait(9)
 local SavePosition = Instance.new("TextLabel")
 player = game.Players.LocalPlayer.Character.Humanoid
 player.HealthChanged:Connect(function(hp)
-  if hp <= player.MaxHealth * 0.599 then
+  if hp <= player.MaxHealth * 0.999 then
 wait()
     game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
             lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
@@ -127,7 +127,7 @@ wait(9)
 local SavePosition = Instance.new("TextLabel")
 player = game.Players.LocalPlayer.Character.Humanoid
 player.HealthChanged:Connect(function(hp)
-  if hp <= player.MaxHealth * 0.599 then
+  if hp <= player.MaxHealth * 0.999 then
 wait()
     game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
             lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
