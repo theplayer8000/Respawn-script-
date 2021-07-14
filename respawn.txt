@@ -16,6 +16,7 @@ local SavePosition = Instance.new("TextLabel")
 			lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
 			lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
 			lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
+			wait(1)
 			SavePosition.Text = "Last Place: " ..lastlocationx.. "," ..lastlocationy.. "," ..lastlocationz.. ","
 		--print(tostring(SavePosition.Text))
 	--print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
@@ -94,6 +95,7 @@ wait()
             lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
             lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
             lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
+	    wait(1)
             SavePosition.Text = "Last Place: " ..lastlocationx.. "," ..lastlocationy.. "," ..lastlocationz.. ","
         --print(tostring(SavePosition.Text))
     --print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
