@@ -16,7 +16,7 @@ local SavePosition = Instance.new("TextLabel")
 			lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
 			lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
 			lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
-			wait(1)
+			wait()
 			SavePosition.Text = "Last Place: " ..lastlocationx.. "," ..lastlocationy.. "," ..lastlocationz.. ","
 		--print(tostring(SavePosition.Text))
 	--print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
@@ -95,14 +95,14 @@ wait()
             lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
             lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
             lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
-	    wait(1)
+	    wait()
             SavePosition.Text = "Last Place: " ..lastlocationx.. "," ..lastlocationy.. "," ..lastlocationz.. ","
         --print(tostring(SavePosition.Text))
     --print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
     --print(tostring(SavePosition.Text))
-        wait(1)
+        wait(0.599)
     --print("screengui disabled")
-    repeat wait(1) until game.Players.LocalPlayer.Character.Humanoid
+    repeat wait(0.599) until game.Players.LocalPlayer.Character.Humanoid
     --print("Teleporting back to " ..tostring(SavePosition.Text))
     local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
@@ -139,7 +139,7 @@ wait()
         --print(tostring(SavePosition.Text))
     --print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
     --print(tostring(SavePosition.Text))
-        wait(1)
+        wait(0.5954)
     --print("screengui disabled")
     repeat wait(3) until game.Players.LocalPlayer.Character.Humanoid
     --print("Teleporting back to " ..tostring(SavePosition.Text))
