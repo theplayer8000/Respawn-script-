@@ -6,163 +6,187 @@ print("F6                        turn off instant spawn")
 print("F7                        turn auto respawn on")
 print("F8                        turn auto respawn off")
 local SavePosition = Instance.new("TextLabel")
-	local Imput = game:GetService("UserInputService")
-	Imput.InputBegan:connect(function(inst)
-	if inst.KeyCode == Enum.KeyCode.F1 then
-	game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
-	game.Lighting.Blur.Enabled = false
-	game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
-	game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
-			lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
-			lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
-			lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
-			wait()
-			SavePosition.Text = "Last Place: " ..lastlocationx.. "," ..lastlocationy.. "," ..lastlocationz.. ","
-		--print(tostring(SavePosition.Text))
-	--print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
-	--print(tostring(SavePosition.Text))
-		wait(0.599)
-	--print("screengui disabled")
-	repeat wait(0.999) until game.Players.LocalPlayer.Character.Humanoid
-	--print("Teleporting back to " ..tostring(SavePosition.Text))
-	local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
-	wait()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
-	wait()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
-	end
-	end)
 local Imput = game:GetService("UserInputService")
-	Imput.InputBegan:connect(function(inst)
-	if inst.KeyCode == Enum.KeyCode.F1 then
-_G.on = 1
-    while _G.on == 1
- do
-game.Lighting.Blur.Enabled = false
-	game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
-	game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
-wait()	
-end
-end
-end)
-
-local Imput = game:GetService("UserInputService")
-	Imput.InputBegan:connect(function(inst)
-	if inst.KeyCode == Enum.KeyCode.F5 then
-_G.Toggle = true
-while _G.Toggle do
-    wait()
-    for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-        if v.Name == "ForceField" then
-          v:Destroy()
-        end
-    end
-end
-end
-end)
-
-local Imput = game:GetService("UserInputService")
-	Imput.InputBegan:connect(function(inst)
-	if inst.KeyCode == Enum.KeyCode.F6 then
-_G.Toggle = false
-while _G.Toggle do
-    wait()
-    for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-        if v.Name == "ForceField" then
-          v:Destroy()
-        end
-    end
-end
-end
-end)
-
-
-local Imput = game:GetService("UserInputService")
-	Imput.InputBegan:connect(function(inst)
-    if inst.KeyCode == Enum.KeyCode.F7 then
-_G.on = 1
-    while _G.on == 1
- do
-print("\nauto respawn script made by t h e p l a y e r�#9980")
-wait(9)
-local SavePosition = Instance.new("TextLabel")
-player = game.Players.LocalPlayer.Character.Humanoid
-player.HealthChanged:Connect(function(hp)
-  if hp <= player.MaxHealth * 0.999 then
-wait()
-    game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+Imput.InputBegan:connect(
+    function(inst)
+        if inst.KeyCode == Enum.KeyCode.F1 then
+            game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+            game.Lighting.Blur.Enabled = false
+            game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+            game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
             lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
             lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
             lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
-	    wait()
-            SavePosition.Text = "Last Place: " ..lastlocationx.. "," ..lastlocationy.. "," ..lastlocationz.. ","
-        --print(tostring(SavePosition.Text))
-    --print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
-    --print(tostring(SavePosition.Text))
-        wait(0.599)
-    --print("screengui disabled")
-    repeat wait(0.599) until game.Players.LocalPlayer.Character.Humanoid
-    --print("Teleporting back to " ..tostring(SavePosition.Text))
-    local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
-	wait()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
-	wait()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
-  end
-end)
-end
-end
-end)
-
+            wait()
+            SavePosition.Text = "Last Place: " .. lastlocationx .. "," .. lastlocationy .. "," .. lastlocationz .. ","
+            --print(tostring(SavePosition.Text))
+            --print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
+            --print(tostring(SavePosition.Text))
+            wait(0.599)
+            --print("screengui disabled")
+            repeat
+                wait(0.999)
+            until game.Players.LocalPlayer:WaitForChild("Humanoid")
+            --print("Teleporting back to " ..tostring(SavePosition.Text))
+            local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(lastlocationx, lastlocationy, lastlocationz)
+            wait()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(lastlocationx, lastlocationy, lastlocationz)
+            wait()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(lastlocationx, lastlocationy, lastlocationz)
+        end
+    end
+)
+local Imput = game:GetService("UserInputService")
+Imput.InputBegan:connect(
+    function(inst)
+        if inst.KeyCode == Enum.KeyCode.F1 then
+            _G.on = 1
+            while _G.on == 1 do
+                game.Lighting.Blur.Enabled = false
+                game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+                game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
+                wait()
+            end
+        end
+    end
+)
 
 local Imput = game:GetService("UserInputService")
-	Imput.InputBegan:connect(function(inst)
-	if inst.KeyCode == Enum.KeyCode.F8 then
-_G.on = 0
-    while _G.on == 1
- do
- 
-print("\nauto respawn script made by t h e p l a y e r�#9980")
-wait(9)
-local SavePosition = Instance.new("TextLabel")
-player = game.Players.LocalPlayer.Character.Humanoid
-player.HealthChanged:Connect(function(hp)
-  if hp <= player.MaxHealth * 0.999 then
-wait()
-    game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
-            lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
-            lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
-            lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
-            SavePosition.Text = "Last Place: " ..lastlocationx.. "," ..lastlocationy.. "," ..lastlocationz.. ","
-        --print(tostring(SavePosition.Text))
-    --print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
-    --print(tostring(SavePosition.Text))
-        wait(0.5954)
-    --print("screengui disabled")
-    repeat wait(3) until game.Players.LocalPlayer.Character.Humanoid
-    --print("Teleporting back to " ..tostring(SavePosition.Text))
-    local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
-  end
-end)
-end
-end
-end)
+Imput.InputBegan:connect(
+    function(inst)
+        if inst.KeyCode == Enum.KeyCode.F5 then
+            _G.Toggle = true
+            while _G.Toggle do
+                wait()
+                for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                    if v.Name == "ForceField" then
+                        v:Destroy()
+                    end
+                end
+            end
+        end
+    end
+)
 
 local Imput = game:GetService("UserInputService")
-	Imput.InputBegan:connect(function(inst)
-	if inst.KeyCode == Enum.KeyCode.F1 then
-_G.on = 1
-    while _G.on == 1
- do
-game.Lighting.Blur.Enabled = false
-	game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
-	game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
-wait()	
-end
-end
-end)
+Imput.InputBegan:connect(
+    function(inst)
+        if inst.KeyCode == Enum.KeyCode.F6 then
+            _G.Toggle = false
+            while _G.Toggle do
+                wait()
+                for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                    if v.Name == "ForceField" then
+                        v:Destroy()
+                    end
+                end
+            end
+        end
+    end
+)
 
+local Imput = game:GetService("UserInputService")
+Imput.InputBegan:connect(
+    function(inst)
+        if inst.KeyCode == Enum.KeyCode.F7 then
+            _G.on = 1
+            while _G.on == 1 do
+                print("\nauto respawn script made by t h e p l a y e r�#9980")
+                wait(9)
+                local SavePosition = Instance.new("TextLabel")
+                player = game.Players.LocalPlayer:WaitForChild("Humanoid")
+                player.HealthChanged:Connect(
+                    function(hp)
+                        if hp <= player.MaxHealth * 0.999 then
+                            wait()
+                            game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+                            lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
+                            lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
+                            lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
+                            wait()
+                            SavePosition.Text =
+                                "Last Place: " .. lastlocationx .. "," .. lastlocationy .. "," .. lastlocationz .. ","
+                            --print(tostring(SavePosition.Text))
+                            --print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
+                            --print(tostring(SavePosition.Text))
+                            wait(0.599)
+                            --print("screengui disabled")
+                            repeat
+                                wait(0.599)
+                            until game.Players.LocalPlayer:WaitForChild("Humanoid")
+                            --print("Teleporting back to " ..tostring(SavePosition.Text))
+                            local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                                CFrame.new(lastlocationx, lastlocationy, lastlocationz)
+                            wait()
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                                CFrame.new(lastlocationx, lastlocationy, lastlocationz)
+                            wait()
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                                CFrame.new(lastlocationx, lastlocationy, lastlocationz)
+                        end
+                    end
+                )
+            end
+        end
+    end
+)
 
+local Imput = game:GetService("UserInputService")
+Imput.InputBegan:connect(
+    function(inst)
+        if inst.KeyCode == Enum.KeyCode.F8 then
+            _G.on = 0
+            while _G.on == 1 do
+                print("\nauto respawn script made by t h e p l a y e r�#9980")
+                wait(9)
+                local SavePosition = Instance.new("TextLabel")
+                player = game.Players.LocalPlayer.Character.Humanoid
+                player.HealthChanged:Connect(
+                    function(hp)
+                        if hp <= player.MaxHealth * 0.999 then
+                            wait()
+                            game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+                            lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
+                            lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
+                            lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
+                            SavePosition.Text =
+                                "Last Place: " .. lastlocationx .. "," .. lastlocationy .. "," .. lastlocationz .. ","
+                            --print(tostring(SavePosition.Text))
+                            --print("Player " ..tostring(game.Players.LocalPlayer.Name).. " Respawn")
+                            --print(tostring(SavePosition.Text))
+                            wait(0.5954)
+                            --print("screengui disabled")
+                            repeat
+                                wait(3)
+                            until game.Players.LocalPlayer.Character.Humanoid
+                            --print("Teleporting back to " ..tostring(SavePosition.Text))
+                            local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                                CFrame.new(lastlocationx, lastlocationy, lastlocationz)
+                        end
+                    end
+                )
+            end
+        end
+    end
+)
+
+local Imput = game:GetService("UserInputService")
+Imput.InputBegan:connect(
+    function(inst)
+        if inst.KeyCode == Enum.KeyCode.F1 then
+            _G.on = 1
+            while _G.on == 1 do
+                game.Lighting.Blur.Enabled = false
+                game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+                game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
+                wait()
+            end
+        end
+    end
+)
