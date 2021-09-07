@@ -98,7 +98,7 @@ Imput.InputBegan:connect(
                 print("\nauto respawn script made by t h e p l a y e r�#9980")
                 wait(9)
                 local SavePosition = Instance.new("TextLabel")
-                player = game.Players.LocalPlayer:WaitForChild("Humanoid")
+                player = game.Players.LocalPlayer.Character.Humanoid
                 player.HealthChanged:Connect(
                     function(hp)
                         if hp <= player.MaxHealth * 0.999 then
